@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Webpage</title>
+    <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          margin: 0;
+          background-color: rgb(255, 255, 255);
+        }
+
+        header {
+          margin: 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          background-color: #2c3e50;
+          color: white;
+          padding: 10px;
+        }
+
+        header h1 {
+          flex: 2;
+          margin-left: 15px;
+          font-size: 24px;
+        }
+
+        header nav {
+          flex: 1;
+          display: flex;
+          text-align: center;
+          flex-direction: row;
+          margin: 0;
+        }
+
+        header nav a {
+          flex: 1;
+          text-decoration: none;
+          font-size: 15px;
+          color: white;
+          padding: 5px;
+          margin: 1px;
+        }
+
+        header nav a:hover {
+            background-color: #e67e22;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        main {
+          text-align: center;
+          margin: 30px;
+        }
+
+        footer {
+            background: #2c3e50;;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 750px) {
+          header{
+            flex-direction: column;
+          }
+          header nav {
+            width: 75%;
+          }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Static Web Page</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h2>About This Page</h2>
+        <p>This is a simple static webpage using semantic HTML and basic CSS for styling and responsiveness.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        
+    </main>
+    <footer>
+        <p>&copy; 2025 My Static Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

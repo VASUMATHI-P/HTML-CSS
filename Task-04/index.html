@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #313377;
+      padding: 10px 10px;
+      color: white;
+    }
+
+    header h1 {
+      flex: 1;
+      margin-left: 25px;
+      padding: 10px;
+      font-size: 24px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      text-align: center;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu li {
+      position: relative;
+      background-color: #36587d;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+      text-align: center;
+      transition: display 0.3s;
+    }
+
+    .submenu {
+      display: flex;
+      flex-direction: column;
+      list-style: disc;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #29355e;
+      width: 150px;
+      display: none;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+    }
+
+    .menu li:hover .submenu {
+      display: block;
+    }
+
+    .menu li:hover {
+      background-color: #46709f;
+    }
+
+    .submenu li{
+      padding: 0;
+    }
+
+    .submenu a {
+      padding: 10px;
+      display: block;
+      text-align: center;
+      margin: 5px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+      }
+      .menu {
+        flex-direction: column;
+        align-items: center;
+      }
+      .menu > li {
+        width: 100%;
+        text-align: center;
+      }
+      
+      .submenu {
+        position: relative;
+        display: none;
+        width: 100%;
+      }
+
+      .menu li:hover .submenu {
+        display: block;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Learn With Me</h1>
+    <nav class="navbar">
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li>
+          <a href="#">Web development</a>
+          <ul class="submenu">
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+    </nav>
+  </header>
+</body>
+</html>

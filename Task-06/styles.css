@@ -1,0 +1,103 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #F7F5F2;
+  color: #333333;
+}
+
+header, footer {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #008080;
+  color: white;
+  padding: 10px;
+}
+
+header h1 {
+  flex: 2;
+  margin-left: 15px;
+  font-size: 24px;
+}
+
+header nav {
+  flex: 1;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  margin: 0;
+}
+
+header nav label {
+  flex: 1;
+  text-decoration: none;
+  font-size: 15px;
+  background-color: #FAE1DD;
+  color: #333333;
+  padding: 5px;
+  margin: 5px;
+  border-width: 1px;
+  border: solid 1px #333333;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+header nav label:hover {
+  background-color: #FFA07A;
+  color: #333333;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+main {
+  margin: 30px;
+}
+
+.section {
+  display: none;
+  margin: 50px;
+  background-color: #FAE1DD;
+  color: #333333;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header:has(#home-check:checked) ~ main #home,
+header:has(#about-check:checked) ~ main #about,
+header:has(#services-check:checked) ~ main #services,
+header:has(#contact-check:checked) ~ main #contact {
+  display: block;
+}
+
+#home-check:checked + label,
+#about-check:checked + label,
+#services-check:checked + label,
+#contact-check:checked + label {
+  background-color: #FFA07A;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 750px) {
+  header {
+    flex-direction: column;
+  }
+  .section{
+    margin: 20px;
+  }
+  header nav {
+    width: 75%;
+  }
+}
